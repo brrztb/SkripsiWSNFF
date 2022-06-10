@@ -1,0 +1,12 @@
+{
+    "name": "david/skripsi",
+    "description": "A program for bla bla",
+    "authors": [
+        {
+            "name": "David WIdjaya"
+        }
+    ],
+    "require": {
+        "bcosca/fatfree-core":"3.8.0"
+    }
+}
