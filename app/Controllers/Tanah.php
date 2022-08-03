@@ -8,7 +8,7 @@ class Tanah {
         $query1 = $f3->get('GET.spinner');
         $query2 = $f3->get('GET.sort');
 
-        //namanya sanitasi buat ngelindungin kalo ada yg mau masuk2in data lain. inputnya udh expected di dalem sini
+        //sanitasi buat ngelindungin kalo ada yg mau masuk2in data lain. inputnya udh expected di dalem sini
         $allowedColumns = ["ph_tanah", "suhu_tanah", "kelembaban_tanah", "suhu_udara", "kelembaban_udara", "waktu_sensing"];
         if(!in_array($query1, $allowedColumns)) {
             throw new \InvalidArgumentException("$query1 is not in allowed columns for sorting.");
