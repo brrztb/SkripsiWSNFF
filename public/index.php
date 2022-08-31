@@ -10,5 +10,6 @@ $f3->route('GET /helloWorld/@name', 'Controllers\Index->helloWorldAction');
 $f3->route('GET /sql', 'Controllers\Node->nodeStatusAction');
 $f3->route('GET /tanah', 'Controllers\Tanah->tanahAction');
 $f3->route('GET /sensing', 'Controllers\Sensing->sensingAction');
+$f3->route('POST /login', 'Controllers\Login->loginAction');
 //$f3->map('/tanah', 'Controllers\Tanah');
 $f3->run();
