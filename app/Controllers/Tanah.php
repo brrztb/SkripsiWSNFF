@@ -14,12 +14,16 @@ class Tanah {
             throw new \InvalidArgumentException("$query1 is not in allowed columns for sorting.");
         }
 
-        $tanah = $db->exec("SELECT *
+        $tanah = $db->exec("SELECT
+                            id_tanah, jenis_tanah, ph_tanah, suhu_tanah, kelembaban_tanah, suhu_udara, 
+                            kelembaban_udara, kode_petak, waktu_sensing
                             FROM tanah
                             ORDER BY `$query1` DESC");
 
         if (strcasecmp($query2, "false") == 0) {
-            $tanah = $db->exec("SELECT *
+            $tanah = $db->exec("SELECT
+                                id_tanah, jenis_tanah, ph_tanah, suhu_tanah, kelembaban_tanah, suhu_udara, 
+                                kelembaban_udara, kode_petak, waktu_sensing
                                 FROM tanah
                                 ORDER BY `$query1` ASC");
         }
