@@ -35,22 +35,53 @@ class Testing {
         echo $kUdara.$selectedTanahNodes."<br>";
         echo $sUdara.$selectedTanahNodes."<br>";
 
-        $result3 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE kode_petak = ?', array(1=>$ph, 2=>1));
-        $result4 =$db->exec('UPDATE tanah SET kelembaban_tanah = ? WHERE kode_petak = ?', array(1=>$kTanah, 2=>1));
-        $result5 =$db->exec('UPDATE tanah SET suhu_tanah = ? WHERE kode_petak = ?', array(1=>$sTanah, 2=>1));
-        $result6 =$db->exec('UPDATE tanah SET kelembaban_udara = ? WHERE kode_petak = ?', array(1=>$kUdara, 2=>1));
-        $result7 =$db->exec('UPDATE tanah SET suhu_udara = ? WHERE kode_petak = ?', array(1=>$sUdara, 2=>1));
+        echo "rand 1 = ".rand(1, 100)."<br>";
+        echo "rand 2 = ".rand(1, 100)."<br>";
+        echo "rand 3 = ".rand(1, 100)."<br>";
+        echo "rand 4 = ".rand(1, 100)."<br>";
+        echo "rand 5 = ".rand(1, 100)."<br>";
 
-        $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE kode_petak = ?', array(1=>$ph, 2=> 2 ));
-        $result9 =$db->exec('UPDATE tanah SET kelembaban_tanah = ? WHERE kode_petak = ?', array(1=>$kTanah, 2=>2));
-        $result10 =$db->exec('UPDATE tanah SET suhu_tanah = ? WHERE kode_petak = ?', array(1=>$sTanah, 2=>2));
-        $result11 =$db->exec('UPDATE tanah SET kelembaban_udara = ? WHERE kode_petak = ?', array(1=>$kUdara, 2=>2));
-        $result12 =$db->exec('UPDATE tanah SET suhu_udara = ? WHERE kode_petak = ?', array(1=>$sUdara, 2=>2));
 
-        $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE kode_petak = ?', array(1=>$ph, 2=>3));
-        $result14 =$db->exec('UPDATE tanah SET kelembaban_tanah = ? WHERE kode_petak = ?', array(1=>$kTanah, 2=>3));
-        $result15 =$db->exec('UPDATE tanah SET suhu_tanah = ? WHERE kode_petak = ?', array(1=>$sTanah, 2=>3));
-        $result16 =$db->exec('UPDATE tanah SET kelembaban_udara = ? WHERE kode_petak = ?', array(1=>$kUdara, 2=>3));
-        $result17 =$db->exec('UPDATE tanah SET suhu_udara = ? WHERE kode_petak = ?', array(1=>$sUdara, 2=>3));
+        $result31 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+        $result32 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+        $result33 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+        $result34 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+        $result35 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+        $result36 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+        $result37 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+        $result38 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 1 = ?', array(1=>rand(1, 99), 2=>1));
+
+        // $result4 =$db->exec('UPDATE tanah SET kelembaban_tanah = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>1));
+        // $result5 =$db->exec('UPDATE tanah SET suhu_tanah = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>1));
+        // $result6 =$db->exec('UPDATE tanah SET kelembaban_udara = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>1));
+        // $result7 =$db->exec('UPDATE tanah SET suhu_udara = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>1));
+
+        $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+        // $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+        // $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+        // $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+        // $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+        // $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+        // $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+        // $result8 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 2 = ?', array(1=>rand(1, 99), 2=> 2 ));
+
+        // $result9 =$db->exec('UPDATE tanah SET kelembaban_tanah = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>2));
+        // $result10 =$db->exec('UPDATE tanah SET suhu_tanah = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>2));
+        // $result11 =$db->exec('UPDATE tanah SET kelembaban_udara = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>2));
+        // $result12 =$db->exec('UPDATE tanah SET suhu_udara = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>2));
+
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result13 =$db->exec('UPDATE tanah SET ph_tanah = ? WHERE 3 = ?', array(1=>rand(1, 99), 2=>3));
+        // $result14 =$db->exec('UPDATE tanah SET kelembaban_tanah = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>3));
+        // $result15 =$db->exec('UPDATE tanah SET suhu_tanah = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>3));
+        // $result16 =$db->exec('UPDATE tanah SET kelembaban_udara = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>3));
+        // $result17 =$db->exec('UPDATE tanah SET suhu_udara = ? WHERE kode_petak = ?', array(1=>rand(1, 99), 2=>3));
     }
 }
