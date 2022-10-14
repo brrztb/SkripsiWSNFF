@@ -11,6 +11,7 @@ $f3->route('GET /status', 'Controllers\Node->nodeStatusAction');
 $f3->route('GET /tanah', 'Controllers\Tanah->tanahAction');
 $f3->route('GET /sensing', 'Controllers\Sensing->sensingAction');
 $f3->route('GET /phgraph', 'Controllers\PhTanahGraph->getPhTanahAction');
+$f3->route('GET /makechart', 'Controllers\ChartData->getChartDataAction');
 $f3->route('POST /login', 'Controllers\Login->loginAction');
 
 $f3->route('GET /testing', 'Controllers\Testing->testingAction');
