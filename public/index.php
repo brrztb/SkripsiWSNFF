@@ -15,6 +15,7 @@ $f3->route('GET /makechart', 'Controllers\ChartData->getChartDataAction');
 $f3->route('GET /petak', 'Controllers\Petak->petakAction');
 $f3->route('GET /nodelokasi', 'Controllers\NodeLokasi->nodeLokasiAction');
 $f3->route('GET /petakcount', 'Controllers\PetakCount->petakCountAction');
+$f3->route('GET /nodecount', 'Controllers\NodeCount->nodeCountAction');
 $f3->route('POST /login', 'Controllers\Login->loginAction');
 
 $f3->route('GET /testing', 'Controllers\Testing->testingAction');
