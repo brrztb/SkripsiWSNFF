@@ -14,11 +14,21 @@ class ChartData {
             throw new \InvalidArgumentException("$query1 is not in allowed columns for sorting.");
         }
 
-        $chartData = $db->exec("SELECT
-                            kode_petak, `$query1`, waktu_sensing
-                            FROM tanah
-                            ORDER BY waktu_sensing
-                            ASC");
+        // $chartData = $db->exec("SELECT
+        //                     kode_petak, `$query1`, waktu_sensing
+        //                     FROM tanah
+        //                     ORDER BY waktu_sensing
+        //                     ASC");
+
+        $chartData = $db->exec("SELECT * 
+                                FROM (
+                                    SELECT
+                                    kode_petak, `$query1`, waktu_sensing
+                                    FROM tanah
+                                    ORDER BY waktu_sensing DESC
+                                    LIMIT 18446744073709551615
+                                ) AS sub
+                            GROUP BY kode_petak");
                             
         header('Content-type: application/json');
         echo json_encode($chartData);
