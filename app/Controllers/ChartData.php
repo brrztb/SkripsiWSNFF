@@ -35,7 +35,7 @@ class ChartData {
                                 GROUP BY kode_petak");   
         }
         else {
-            //Loop si petak daei query buat ambil data pointnya
+            //Loop si petak dari query buat ambil data pointnya
             foreach ($sinceList as $kodePetak => $since) {
                 $resp = $db->exec("SELECT kode_petak, `$query1`, waktu_sensing
                                     FROM tanah
