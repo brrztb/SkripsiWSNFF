@@ -3,7 +3,7 @@
 namespace Controllers;
 
 class Tanah {
-    public function tanahAction(\Base $f3, array $args = []): void {
+    public function tanahAction(\Base $f3, array $args = []) {
         $db = $f3->get('DB');
         $query1 = $f3->get('GET.spinner');
         $query2 = $f3->get('GET.sort');

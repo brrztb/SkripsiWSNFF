@@ -3,7 +3,7 @@
 namespace Controllers;
 
 class ChartData {
-    public function getChartDataAction(\Base $f3, array $args = []): void {
+    public function getChartDataAction(\Base $f3, array $args = []) {
         $db = $f3->get('DB');
         $query1 = $f3->get('GET.spinner');
         $sinceList = $f3->get('GET.since');

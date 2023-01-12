@@ -3,7 +3,7 @@
 namespace Controllers;
 
 class NodeLokasi {
-    public function nodeLokasiAction(\Base $f3, array $args = []): void {
+    public function nodeLokasiAction(\Base $f3, array $args = []) {
         $db = $f3->get('DB');
         $nodes = $db->exec("SELECT nama_node, lintang, bujur FROM nodesensor");
 

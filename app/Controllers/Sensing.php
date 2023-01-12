@@ -3,7 +3,7 @@
 namespace Controllers;
 
 class Sensing {
-    public function sensingAction(\Base $f3, array $args = []): void {
+    public function sensingAction(\Base $f3, array $args = []) {
         $db = $f3->get('DB');
         $sinceList = $f3->get('GET.since');
 

@@ -2,8 +2,10 @@
 
 namespace Controllers;
 
+use Template;
+
 class Testing {
-    public function testingAction(\Base $f3, array $args = []): void {
+    public function testingAction(\Base $f3, array $args = []) {
         $db = $f3->get('DB');
 
         // //TESTING STATUS NODE
@@ -33,5 +35,8 @@ class Testing {
           $result00 = $db->exec('INSERT INTO tanah (jenis_tanah, ph_tanah, suhu_tanah, kelembaban_tanah, suhu_udara, kelembaban_udara, kode_petak, waktu_sensing)
                                 VALUES ("irigasi", ?, ?, ?, ?, ?, ?, ?)',array( frand(0, 10, 2),  frand(0, 10, 2),  frand(0, 10, 2),  frand(0, 10, 2),
                                 frand(0, 10, 2), rand(1,3), date("Y-m-d H:i:s",$t)));
+    
+        echo Template::instance()->render('TestingRefresh.php');
+        return;
     }
 }

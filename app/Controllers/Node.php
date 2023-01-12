@@ -3,7 +3,7 @@
 namespace Controllers;
 
 class Node {
-    public function nodeStatusAction(\Base $f3, array $args = []): void {
+    public function nodeStatusAction(\Base $f3, array $args = []) {
         $db = $f3->get('DB');
         $getHash = $f3->get('GET.hash');
         $nodes = $db->exec("SELECT nama_node, status_node, status_sensing FROM nodesensor ORDER BY kode_node ASC");

@@ -6,11 +6,15 @@ use Models\User;
 //php -r "echo password_hash('passwordnya', PASSWORD_ARGON2I);"
 
 class Login {
-    public function loginAction(\Base $f3, array $args = []): void {
+    public function loginAction(\Base $f3, array $args = []) {
+        // $username = $f3->get('POST.username');
         $username = $f3->get('POST.username');
         $password = $f3->get('POST.password');
 
+        // var_dump($username.$password);
+
         $user = new User($f3->DB);
+
         $user->getByName($username);
 
         if($user->dry()){
@@ -19,6 +23,7 @@ class Login {
         else {
             if(password_verify($password, $user->password)) {
                 //create token
+
                 $auth = base64_encode($username . ":" . $password);
                 $user->addToken($username,$auth);
 
